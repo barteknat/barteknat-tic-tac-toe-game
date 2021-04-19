@@ -48,18 +48,18 @@ public class Statistics {
         this.draws = 0;
     }
 
+    public Winner whoWins() {
+        if (wins > loses) return PLAYER;
+        if (wins < loses) return ENEMY;
+        return NOBODY;
+    }
+
     @Override
     public String toString() {
         return "played rounds = " + rounds +
                 "\nplayer wins   = " + wins +
                 "\nenemy wins    = " + loses +
                 "\ndraws         = " + draws;
-    }
-
-    public Winner whoWins() {
-        if (wins > loses) return PLAYER;
-        if (wins < loses) return ENEMY;
-        return NOBODY;
     }
 }
 

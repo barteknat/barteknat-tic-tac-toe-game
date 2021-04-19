@@ -11,10 +11,7 @@ public class RoundResolver implements Resolver {
     @Override
     public RoundResult resolve(Figure figure) {
         for (int i = 0; i < Board.board.length; i++) {
-            if (Board.board[i][0] == Board.board[i][1] && Board.board[i][1] == Board.board[i][2] && Board.board[i][2] == figure ||
-                    Board.board[0][i] == Board.board[1][i] && Board.board[1][i] == Board.board[2][i] && Board.board[2][i] == figure ||
-                    Board.board[0][0] == Board.board[1][1] && Board.board[1][1] == Board.board[2][2] && Board.board[2][2] == figure ||
-                    Board.board[2][0] == Board.board[1][1] && Board.board[1][1] == Board.board[0][2] && Board.board[0][2] == figure)
+            if (isInLine(figure, i))
                 return WIN;
         }
         for (int i = 0; i < Board.board.length; i++) {
@@ -23,6 +20,13 @@ public class RoundResolver implements Resolver {
             }
         }
         return DRAW;
+    }
+
+    private boolean isInLine(Figure figure, int i) {
+        return Board.board[i][0] == Board.board[i][1] && Board.board[i][1] == Board.board[i][2] && Board.board[i][2] == figure ||
+                Board.board[0][i] == Board.board[1][i] && Board.board[1][i] == Board.board[2][i] && Board.board[2][i] == figure ||
+                Board.board[0][0] == Board.board[1][1] && Board.board[1][1] == Board.board[2][2] && Board.board[2][2] == figure ||
+                Board.board[2][0] == Board.board[1][1] && Board.board[1][1] == Board.board[0][2] && Board.board[0][2] == figure;
     }
 }
 

@@ -19,19 +19,28 @@ public class Board {
         int c = 0;
         userInterface.printRawIndex();
         for (int i = 0; i < board.length; i++) {
-            userInterface.printColumnIndex(c++);
-            if (c == 3) {
-                c = 0;
-            }
+            c = getColumnIndex(c);
             for (int j = 0; j < board.length; j++) {
-                if (board[i][j] == null) {
-                    userInterface.printEmptyField();
-                } else {
-                    userInterface.printBoard(board, i, j);
-                }
+                getBoardFields(i, j);
             }
             userInterface.printEmptyLine();
         }
+    }
+
+    private void getBoardFields(int i, int j) {
+        if (board[i][j] == null) {
+            userInterface.printEmptyField();
+        } else {
+            userInterface.printBoard(board, i, j);
+        }
+    }
+
+    private int getColumnIndex(int c) {
+        userInterface.printColumnIndex(c++);
+        if (c == 3) {
+            c = 0;
+        }
+        return c;
     }
 
     public void resetBoard() {

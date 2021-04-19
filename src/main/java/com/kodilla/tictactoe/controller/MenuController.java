@@ -19,9 +19,9 @@ public class MenuController {
     @FXML
     private Label welcome;
     @FXML
-    private RadioButton o;
+    private RadioButton O;
     @FXML
-    private RadioButton x;
+    private RadioButton X;
 
     public void getWelcome() {
         welcome.setText(userInterface.printWelcome());
@@ -29,19 +29,19 @@ public class MenuController {
 
     @FXML
     public void getO() {
-        userInterface.setPlayerFigure(Figure.o);
+        userInterface.setPlayerFigure(Figure.FIGURE_O);
         userInterface.setEnemyFigure();
-        o.setDisable(true);
-        x.setDisable(true);
+        O.setDisable(true);
+        X.setDisable(true);
         userInterface.getEnemyFigure();
     }
 
     @FXML
     public void getX() {
-        userInterface.setPlayerFigure(Figure.x);
+        userInterface.setPlayerFigure(Figure.FIGURE_X);
         userInterface.setEnemyFigure();
-        o.setDisable(true);
-        x.setDisable(true);
+        O.setDisable(true);
+        X.setDisable(true);
         userInterface.getEnemyFigure();
     }
 

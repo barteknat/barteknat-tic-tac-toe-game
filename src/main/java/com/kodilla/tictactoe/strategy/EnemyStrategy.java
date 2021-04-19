@@ -13,7 +13,6 @@ public class EnemyStrategy implements Strategy {
     }
 
     public Figure getMove(int row, int col, Figure figure) {
-
         return Board.board[row][col] = figure;
     }
 }

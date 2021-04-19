@@ -63,11 +63,11 @@
                      </font></Label>
                   <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0" spacing="30.0">
                      <children>
-                        <RadioButton fx:id="o" mnemonicParsing="false" onAction="#getO" text="O">
+                        <RadioButton fx:id="O" mnemonicParsing="false" onAction="#getO" text="O">
                            <font>
                               <Font size="15.0" />
                            </font></RadioButton>
-                        <RadioButton mnemonicParsing="false" onAction="#getX" text="X" fx:id="x">
+                        <RadioButton mnemonicParsing="false" onAction="#getX" text="X" fx:id="X">
                            <font>
                               <Font size="15.0" />
                            </font></RadioButton>

@@ -31,7 +31,5 @@ public interface UserInterface {
     void printBoard(Figure[][] board, int i, int j);
 
     void printEmptyLine();
-
 }
-
 

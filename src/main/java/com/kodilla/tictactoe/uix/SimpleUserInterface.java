@@ -23,10 +23,10 @@ public class SimpleUserInterface implements UserInterface {
 
     @Override
     public void setEnemyFigure() {
-        if (playerFigure == Figure.x) {
-            enemyFigure = Figure.o;
+        if (playerFigure == Figure.FIGURE_X) {
+            enemyFigure = Figure.FIGURE_O;
         } else {
-            enemyFigure = Figure.x;
+            enemyFigure = Figure.FIGURE_X;
         }
     }
 

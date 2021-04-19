@@ -86,11 +86,11 @@ public class GameController {
     }
 
     public void drawFigure(GraphicsContext g, Figure figure, int x, int y) {
-        if (figure == Figure.x) {
+        if (figure == Figure.FIGURE_X) {
             g.setStroke(Color.LIGHTSEAGREEN);
             g.strokeLine(70 + y * 100, 70 + x * 100, 130 + y * 100, 130 + x * 100);
             g.strokeLine(70 + y * 100, 130 + x * 100, 130 + y * 100, 70 + x * 100);
-        } else if (figure == Figure.o) {
+        } else if (figure == Figure.FIGURE_O) {
             g.setStroke(Color.DARKSLATEBLUE);
             g.strokeOval(65 + y * 100, 65 + x * 100, 70, 70);
         }
